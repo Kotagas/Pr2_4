@@ -1,61 +1,98 @@
-/* Базові стилі таблиці */
+/* Отступы */
+
 table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid #4a0072; /* Темно-фіолетовий колір */
-  }
-  
-  /* Стилі для заголовків і клітинок */
-  th, td {
-    padding: 15px;
-    text-align: left;
-  }
-  
-  /* Ширина стовпців */
-  thead th:nth-child(1) { width: 25%; } /* Назва гурту */
-  thead th:nth-child(2) { width: 15%; } /* Рік заснування */
-  thead th:nth-child(3) { width: 20%; } /* Країна */
-  thead th:nth-child(4) { width: 25%; } /* Назва хіта */
-  thead th:nth-child(5) { width: 15%; } /* Рік випуску хіта */
-  
-  /* Типографіка */
-  body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  thead th {
-    font-family: 'Georgia', serif;
-    background: linear-gradient(to bottom, #4a0072, #2a0042);
-    color: white;
-    text-shadow: 1px 1px 1px black;
-  }
-  
-  caption {
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 10px;
-    color: #333;
-    text-align: center;
-    caption-side: top;
-  }
-  
-  /* Полосата зебра */
-  tbody tr:nth-child(odd) {
-    background-color: #f9f9f9; /* Світло-сірий для непарних рядків */
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #e6e6e6; /* Трохи темніший для парних рядків */
-  }
-  
-  /* Ефект при наведенні */
-  tbody tr:hover {
-    background-color: #d1d1d1;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Межі для клітинок */
-  th, td {
-    border: 1px solid #ccc;
-  }
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+/* Типографика */
+
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+/* Графика и цвета */
+
+thead,
+tfoot {
+  background: url(leopardskin.jpg);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
+  border: 3px solid purple;
+}
+/* Полосатая зебра */
+
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+
+table {
+  background-color: #ff33cc;
+}
+/* Заголовок */
+
+caption {
+  font-family: "Rock Salt", cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
